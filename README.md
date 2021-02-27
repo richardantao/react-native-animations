@@ -1,2 +1,2 @@
 # Learning React Native Animations
-Practice project for learning React Native animations.
+Creating fun animations in React Native using `react-native-reanimated` and `react-native-gesture-handler`.
