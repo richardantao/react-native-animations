@@ -3,11 +3,14 @@ import { StatusBar } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { enableScreens } from "react-native-screens";
 
+/* Animations */
+import ClockValuesAndIdentities from "./src/animations/ClockValuesAndIdentities";
+import Transitions from "./src/animations/Transitions";
+import UseTransition from "./src/animations/useTransition";
+
+/* Components */
 import { LoadAssets, StyleGuide, cards } from "./src/components";
 import Examples, { examples } from "./src/Examples";
-
-import ClockValuesAndIdentities from "./src/animations/ClockValuesAndIdentities";
-
 import { Lessons } from "./src/components/Routes";
 
 enableScreens();
@@ -29,6 +32,7 @@ const { Navigator, Screen } = createStackNavigator<Lessons>();
 
 const AppNavigator = () =>
 	<Navigator
+		initialRouteName="useTransition"
 		screenOptions={{
 			headerStyle: {
 				backgroundColor: StyleGuide.palette.primary,
@@ -44,9 +48,23 @@ const AppNavigator = () =>
 				title: "Clock Values & Identities",
 			}}
 		/>
+		<Screen
+			name="Transitions"
+			component={Transitions}
+			options={{
+				title: "Transitions"
+			}}
+		/>
+		<Screen
+			name="useTransition"
+			component={UseTransition}
+			options={{
+				title: "useTransition()",
+			}}
+		/>
 	</Navigator>;
 
-const App = () =>
+const App = (): JSX.Element =>
 	<LoadAssets {...{ fonts, assets }}>
 		<StatusBar barStyle="light-content" />
 		<AppNavigator />
