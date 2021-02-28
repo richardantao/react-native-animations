@@ -7,6 +7,8 @@ import { enableScreens } from "react-native-screens";
 import ClockValuesAndIdentities from "./src/animations/ClockValuesAndIdentities";
 import Transitions from "./src/animations/Transitions";
 import UseTransition from "./src/animations/useTransition";
+import Timing from "./src/animations/Timing";
+import PanGesture from "./src/animations/PanGesture";
 
 /* Components */
 import { LoadAssets, StyleGuide, cards } from "./src/components";
@@ -32,7 +34,7 @@ const { Navigator, Screen } = createStackNavigator<Lessons>();
 
 const AppNavigator = () =>
 	<Navigator
-		initialRouteName="useTransition"
+		initialRouteName="PanGesture"
 		screenOptions={{
 			headerStyle: {
 				backgroundColor: StyleGuide.palette.primary,
@@ -59,7 +61,21 @@ const AppNavigator = () =>
 			name="useTransition"
 			component={UseTransition}
 			options={{
-				title: "useTransition()",
+				title: "useTransition()"
+			}}
+		/>
+		<Screen
+			name="Timing"
+			component={Timing}
+			options={{
+				title: "Timing"
+			}}
+		/>
+		<Screen
+			name="PanGesture"
+			component={PanGesture}
+			options={{
+				title: "PanGesture"
 			}}
 		/>
 	</Navigator>;
