@@ -10,6 +10,17 @@
 		"noEmit": true,
 		"skipLibCheck": true,
 		"resolveJsonModule": true,
-		"strict": true
-	}
+		"strict": true,
+		"baseUrl": ".",
+		"paths": {
+			"react-native-redash": [
+				"react-native-redash/lib/module/v1"
+			]
+		}
+	},
+	"include": [
+		"node_modules/react-native-redash/lib/typescript/v1/index.d.ts",
+		"src/**/*",
+		"App.tsx"
+	]
 }
