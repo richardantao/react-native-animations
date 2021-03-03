@@ -9,6 +9,8 @@ import Transitions from "./src/animations/Transitions";
 import UseTransition from "./src/animations/useTransition";
 import Timing from "./src/animations/Timing";
 import PanGesture from "./src/animations/PanGesture";
+import Decay from "./src/animations/Decay";
+import Spring from "./src/animations/Spring";
 
 /* Components */
 import { LoadAssets, StyleGuide, cards } from "./src/components";
@@ -34,7 +36,7 @@ const { Navigator, Screen } = createStackNavigator<Lessons>();
 
 const AppNavigator = () =>
 	<Navigator
-		initialRouteName="PanGesture"
+		initialRouteName="Spring"
 		screenOptions={{
 			headerStyle: {
 				backgroundColor: StyleGuide.palette.primary,
@@ -76,6 +78,20 @@ const AppNavigator = () =>
 			component={PanGesture}
 			options={{
 				title: "PanGesture"
+			}}
+		/>
+		<Screen
+			name="Decay"
+			component={Decay}
+			options={{
+				title: "Decay"
+			}}
+		/>
+		<Screen
+			name="Spring"
+			component={Spring}
+			options={{
+				title: "Spring"
 			}}
 		/>
 	</Navigator>;
