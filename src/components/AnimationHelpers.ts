@@ -22,7 +22,7 @@ import Animated, {
 	defined,
 } from "react-native-reanimated";
 import { State } from "react-native-gesture-handler";
-import { min } from "react-native-redash";
+import { min } from "react-native-redash/lib/module/v1";
 
 export interface TimingProps {
 	clock?: Animated.Clock;

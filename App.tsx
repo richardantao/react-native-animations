@@ -11,6 +11,7 @@ import Timing from "./src/animations/Timing";
 import PanGesture from "./src/animations/PanGesture";
 import Decay from "./src/animations/Decay";
 import Spring from "./src/animations/Spring";
+import Swipe from "./src/animations/Swipe";
 
 /* Components */
 import { LoadAssets, StyleGuide, cards } from "./src/components";
@@ -36,7 +37,7 @@ const { Navigator, Screen } = createStackNavigator<Lessons>();
 
 const AppNavigator = () =>
 	<Navigator
-		initialRouteName="Spring"
+		initialRouteName="Swipe"
 		screenOptions={{
 			headerStyle: {
 				backgroundColor: StyleGuide.palette.primary,
@@ -92,6 +93,13 @@ const AppNavigator = () =>
 			component={Spring}
 			options={{
 				title: "Spring"
+			}}
+		/>
+		<Screen
+			name="Swipe"
+			component={Swipe}
+			options={{
+				title: "Swipe"
 			}}
 		/>
 	</Navigator>;
